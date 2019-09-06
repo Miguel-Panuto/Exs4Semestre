@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="4Sem:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/4Sem_jar</output-path>
+    <root id="archive" name="4Sem.jar">
+      <element id="module-output" name="4Sem" />
+    </root>
+  </artifact>
+</component>
