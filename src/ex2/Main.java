@@ -1,36 +1,34 @@
 package ex2;
 
-
+import java.awt.Frame;
 import javax.swing.*;
+
 
 public class Main
 {
+
     public static void main(String[] args)
     {
-        while (true)
+
+
+        int number = Integer.parseInt(JOptionPane.showInputDialog("escolha um numero de 0 a 9"));
+        int random = (int) (Math.random() * 10);
+
+        if (number == random)
         {
-            int n = (int) (Math.random() * 10);
-            int number;
-            while (true)
-            {
-                try
-                {
-                    number = Integer.parseInt(JOptionPane.showInputDialog("Insira um número (insira entre 0 e 9, caso contrario parará)"));
-                } catch (NumberFormatException e)
-                {
-                    JOptionPane.showMessageDialog(new JFrame(), "Put a correct number", "ERROR", JOptionPane.ERROR_MESSAGE);
-                    continue;
-                }
-                break;
-            }
 
-            if (number > 9 || number < 0)
-            {
-                break;
-            }
-            String afirmacao = (n == number) ? "acertou, o número foi " + n : "errou, o número foi " + n + " e o seu " + number;
+            JOptionPane.showMessageDialog(new Frame(), "voce acertou o numero");
+            System.out.println("voce acertou o numero");
+            System.out.println("o numero era  " + random);
 
-            JOptionPane.showMessageDialog(new JFrame(), "Você " + afirmacao);
+        } else
+        {
+
+            JOptionPane.showMessageDialog(new Frame(), "voce errou o numero");
+            System.out.println("voce errou  ");
+            System.out.println("o numero era  " + random);
         }
+
     }
+
 }
